@@ -1,0 +1,9 @@
+/.venv
+
+/.idx
+
+/__pycache__
+
+/.vscode
+
+devserver.sh
