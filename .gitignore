@@ -1,9 +1,67 @@
-/.venv
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-/.idx
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.pyenv/
 
-/__pycache__
+# Flask instance folder
+instance/
 
-/.vscode
+# Flask environment files
+*.env
+.env.*
 
+# Pytest cache
+.pytest_cache/
+
+# VS Code
+.vscode/
+
+# IDEs
+.idea/
+*.swp
+.idx/
 devserver.sh
+
+# Logs
+*.log
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+.cache
+
+# MyPy, Pylint, Bandit, etc.
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.pylint.d/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# MacOS
+.DS_Store
+
+# Database
+*.sqlite3
+*.db
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
