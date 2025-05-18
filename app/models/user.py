@@ -28,15 +28,23 @@ class User(db.Model):
         """Kiểm tra mật khẩu."""
         return check_password_hash(self.password_hash, password)
     
-    def to_dict(self):
+    def to_dict(self, viewer=None):
         """Chuyển đổi user thành dictionary để trả về qua API."""
-        return {
+        
+        data =  {
             'id': self.id,
             'username': self.username,
             'email': self.email,
             'fullname': self.fullname,
             'bio': self.bio,
-            'avatar_url': self.avatar_url,
-            'created_at': self.created_at,
+            'profile_picture': self.profile_picture,
+            'created_at': self.created_at
         }
+
+        if viewer:
+            data['follower_count'] = Follow.query.filter_by(following_id=self.id).count()
+            data['following_count'] = Follow.query.filter_by(follower_id=self.id).count()
+            data['is_following'] = Follow.query.filter_by(follower_id=viewer.id, following_id=self.id).first() is not None
+            
+        return data
 

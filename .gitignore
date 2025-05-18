@@ -65,3 +65,6 @@ dist/
 # Pip
 pip-log.txt
 pip-delete-this-directory.txt
+
+#google-api
+dev-splicer-459914-j8-f73e13bda516.json
